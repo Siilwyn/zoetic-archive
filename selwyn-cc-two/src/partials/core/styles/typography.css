@@ -1,0 +1,93 @@
+@import 'variables.css';
+
+@font-face {
+    src: url('/assets/fonts/bree-serif-regular.woff2') format('woff2'),
+         url('/assets/fonts/bree-serif-regular.ttf') format('truetype'),
+         url('/assets/fonts/bree-serif-regular.svg') format('svg');
+    font-family: 'Bree Serif';
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    src: url('/assets/fonts/open-sans-regular.woff2') format('woff2'),
+         url('/assets/fonts/open-sans-regular.ttf') format('truetype'),
+         url('/assets/fonts/open-sans-regular.svg') format('svg');
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding-top: 0.7em;
+    padding-bottom: 0.5em;
+    font-family: 'Bree Serif', 'Ubuntu Light', Ubuntu, sans-serif;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    padding-top: 0;
+    font-size: 3.157em;
+}
+
+h2 {
+    font-size: 2.369em;
+}
+
+h3 {
+    font-size: 1.777em;
+}
+
+h4 {
+    font-size: 1.333em;
+}
+
+h1 + h2,
+h2 + h3,
+h3 + h4 {
+    padding-top: 0;
+}
+
+p {
+    max-width: 37.5em;
+    padding-bottom: 1.3em;
+}
+
+small {
+    font-size: 0.75em;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+    text-decoration: underline;
+}
+
+li {
+    list-style: none;
+}
+
+.highlight {
+    color: var(--brand-highlight);
+    font-weight: bold;
+}
+
+::selection {
+    background: var(--brand-highlight);
+    color: var(--white);
+}
+
+@media (--l-viewport) {
+    h2 {
+     font-size: 3em;
+    }
+}

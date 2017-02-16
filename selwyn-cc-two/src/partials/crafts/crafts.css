@@ -1,0 +1,53 @@
+@import '../core/styles/variables.css';
+
+.craft-container {
+    position: relative;
+    height: 25rem;
+}
+
+.craft-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.craft-container::before {
+    position: absolute;
+    top: 0; right: 0;
+    bottom: 0; left: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 10%, rgba(29, 29, 29, 0.75) 60%);
+    content: '';
+}
+
+.craft-title {
+    max-width: 37.5rem;
+    margin: 0 0.75rem 0.3em 0.75rem;
+    padding-bottom: 0.1em;
+    border-bottom: 2px solid;
+}
+
+.craft-description {
+    margin: 0 0.75rem 1.3em 0.75rem;
+}
+
+@media (--l-viewport) {
+    .craft-container {
+        font-size: 1.2rem;
+    }
+
+    .crafts-title {
+        margin-left: 1.5rem;
+    }
+}
+
+.craft-caption {
+    display: flex;
+    position: absolute;
+    bottom: 2em;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: var(--white);
+    text-shadow: 0.01em 0.01em 0.25em #2b2f30;
+}

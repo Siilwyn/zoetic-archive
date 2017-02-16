@@ -1,0 +1,82 @@
+@import 'variables.css';
+
+/*.slanted-top::before {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 50%;
+    transform: skewY(-2deg);
+    transform-origin: 100%;
+    backface-visibility: hidden;
+    background: inherit;
+    content: '';
+    z-index: -1;
+    box-shadow: 1px -3px 4rem 1px rgba(0, 0, 0, 0.3);
+}*/
+
+.slanted::before, .slanted::after {
+    display: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 50%;
+    backface-visibility: hidden;
+    background: inherit;
+    box-shadow: 1px -3px 4rem 1px rgba(0, 0, 0, 0.3);
+    content: '';
+    z-index: -1;
+}
+
+.slanted-top:before {
+    display: block;
+    top: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 100% 0;
+}
+
+.slanted-bottom:after {
+    display: block;
+    bottom: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
+}
+
+/* @TODO: move over to view specific CSS file */
+.about-me-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.75em;
+    background: var(--white);
+}
+
+.about-column {
+    width: 100%;
+    max-width: 37.5rem;
+    margin-bottom: 1em;
+}
+
+.about-photo {
+    max-height: 27em;
+    margin-bottom: 1.3em;
+}
+
+.about-capabilities {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-capabilities > li:not(:last-child)::after {
+    content: ',\00a0';
+}
+
+.about-capabilities > li:last-child::after {
+    content: '.'
+}
+
+.about-video {
+    margin: 1.3em auto;
+}

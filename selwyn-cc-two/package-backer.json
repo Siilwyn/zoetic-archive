@@ -1,0 +1,49 @@
+{
+  "name": "selwyn.cc",
+  "version": "1.0.0",
+  "description": "Personal website of Selwyn.",
+  "main": "src/index.js",
+  "config": {
+    "html": "./src/views/*.mustache ./src/partials/**/*.mustache",
+    "htmlviews": "./src/views/*.mustache",
+    "htmlpartials": "./src/partials/**/*.mustache",
+    "css": "./src/partials/**/*.css",
+    "js": "./src/partials/**/*.js",
+    "media": "./src/assets/media/*"
+  },
+  "scripts": {
+    "start": "npm-run-all form build --parallel server watch:*",
+    "watch:html": "chokidar $npm_package_config_html -c 'npm run build:html -s'",
+    "watch:css": "chokidar $npm_package_config_css -c 'npm run build:css -s'",
+    "zwatch:js": "chokidar $npm_package_config_js -c 'npm run build:js -s'",
+    "watch:media": "chokidar $npm_package_config_media -c 'npm run build:media -s'",
+    "build": "npm-run-all build:*",
+    "build:html": "mustache-prestatic $npm_package_config_htmlviews -d ./src/views/*.json -p $npm_package_config_htmlpartials -o dist",
+    "build:css": "postcss $npm_package_config_css -u postcss-import -u postcss-custom-properties -u autoprefixer -u postcss-clean -d ./dist/css",
+    "zbuild:js": "webpack",
+    "build:media": "imagemin $npm_package_config_media ./dist/assets/media",
+    "minify": "npm-run-all build:*",
+    "minify:html": "html-minifier ./dist/*.html --input-dir ./dist --output-dir ./dist",
+    "form": "npm-run-all form:*",
+    "form:css": "cssdeclsort --order smacss $npm_package_config_css",
+    "server": "live-server dist",
+    "clean": "find ./dist ! -type d -delete",
+    "test": "html-minifier --help"
+  },
+  "author": "Selwyn Versteeg",
+  "license": "All Rights Reserved",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "chokidar-cli": "^1.2.0",
+    "css-declaration-sorter": "^1.4.0",
+    "live-server": "^0.9.2",
+    "mustache-prestatic": "^1.1.0",
+    "npm-run-all": "^1.7.0",
+    "postcss-clean": "^1.0.0",
+    "postcss-cli": "^2.5.1",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^8.1.0"
+  },
+  "dependencies": {}
+}

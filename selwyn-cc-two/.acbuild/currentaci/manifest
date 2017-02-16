@@ -1,0 +1,1 @@
+{"acKind":"ImageManifest","acVersion":"0.7.1+git","name":"selwyn.cc/hello","labels":[{"name":"arch","value":"amd64"},{"name":"os","value":"linux"},{"name":"version","value":"0.0.1"}],"annotations":[{"name":"appc.io/acbuild/command-1","value":"acbuild set-name \"selwyn.cc/hello\""},{"name":"appc.io/acbuild/command-2","value":"acbuild label add \"version\" \"0.0.1\""}]}

@@ -1,0 +1,399 @@
+/*
+Black Text: #0a0a0a;
+White Background: #fefefe;
+Fresh Blue: #31bdf2;
+Deep Purple: #84499d;
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    min-width: 520px;
+    background: #fefefe;
+    color: #0a0a0a;
+    text-align: center;
+    font-size: 110%;
+    font-family: Aaargh, sans-serif;
+}
+
+header {
+    padding: 60px 0 0 0 !important;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0.1px 0.1px 0.1px #7e7e7e;
+    position: relative;
+}
+
+article {
+    margin-top: 100vh;
+}
+
+h1 {
+    margin-bottom: 3px;
+    font-size: 1.9em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+p {
+    font-size: 1em;
+    line-height: 140%;
+}
+
+header h3 {
+    color: #31bdf2;
+    text-shadow: 0.1px 0.1px 0 #31bdf2;
+    font-weight: 100;
+    font-variant: small-caps;
+    font-size: 2.2em;
+}
+
+header p {
+    margin: 1.8em auto;
+}
+
+article > section:nth-child(odd) {
+    box-shadow: none;
+}
+
+article > section:nth-child(even) {
+    box-shadow: 0 0 6px 0 #0a0a0a;
+    text-align: left;
+}
+
+section {
+    padding: 60px 2%;
+    background: #fefefe;
+}
+
+article > section:nth-child(2) {
+    background-image: url('../i/carSketch.png');
+    color: #fff;
+}
+
+article > section:nth-child(4) {
+    background: #a176b4;
+    color: white;
+}
+
+.language {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vh;
+    display: inline-block;
+    overflow: hidden;
+    width: 70px;
+    height: 47px;
+    list-style: none outside none;
+    transition: all 1s ease-out;
+    opacity: 0.85;
+}
+
+.language:hover,
+.language:active {
+    height: 110px;
+    opacity: 1;
+}
+
+.language li {
+    display: block;
+    margin: 0;
+    width: 70px;
+    height: 47px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.language li:nth-child(2) {
+    margin: 16px 0 0 0;
+}
+
+.language a {
+    height: 100%;
+    display: block;
+}
+
+section h1 {
+    max-width: 50em;
+}
+
+button {
+    padding: 0 !important;
+    height: 3em;
+    outline: 0;
+    border: 3px solid #31bdf2;
+    background: #31bdf2;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-variant: small-caps;
+    font-size: 1.1em;
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+    transition-property: background, border, color;
+}
+
+button:hover {
+    border: 3px solid #31bdf2;
+    background: #fefefe;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+}
+
+p + a > button {
+    margin: 20px 0 0 0 !important;
+}
+
+.headerBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.85;
+}
+
+#headerBgTall {
+    height: 100vh;
+    background: url('../i/landingBgSmall.jpg') 48.5% 0% no-repeat;
+}
+
+#headerBgShort {
+    background: url('../i/landingBgSmall.jpg') 27.5% 40% no-repeat;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto;
+}
+
+#shortHeader {
+    height: 35vh;
+}
+
+figure {
+    margin: 20px;
+    border-bottom: 1px solid #0a0a0a;
+    text-align: center;
+}
+
+figure:last-child {
+    border: 0;
+}
+
+header > a > img {
+    display: block;
+    margin: 10% auto;
+    opacity: 1;
+}
+
+header > a > img:hover {
+    opacity: 0.8;
+}
+
+form {
+    padding: 0 0 60px 0;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer section:last-child {
+    background: none;
+    color: #fff;
+    text-shadow: 2px 2px 1px #000;
+    font-weight: 900;
+}
+
+form > input {
+    /*float: none !important;*/
+
+    margin: 0;
+    padding: 0 !important;
+    height: 3em;
+    outline: 0;
+    border: 3px solid #31bdf2;
+    background: #fefefe;
+    background: none;
+    color: #0a0a0a;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.1em;
+    font-family: "Liberation Sans";
+}
+
+form > button {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0;
+    border: 3px solid #31bdf2;
+    border-left: 1.5px;
+}
+
+form > button:hover {
+    border: 3px solid #31bdf2;
+    border-left: 1.5px;
+    color: #0a0a0a;
+}
+
+span {
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.alignLeft {
+    text-align: left;
+}
+/* Lightbox */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.lightbox video {
+    margin-top: 10px;
+    max-width: 1920px;
+    width: 90%;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.lightbox:target {
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+}
+
+.lightbox:target video {
+    margin-top: 5%;
+    opacity: 1;
+}
+
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: Aaargh;
+    src: url('../f/Aaargh.woff') format('woff'), url('../f/Aaargh.ttf') format('truetype'), url('../f/Aaargh.svg') format('svg');
+}
+
+@media (min-width: 580px) {
+    #headerBg {
+        opacity: 1;
+    }
+    #headerBgTall {
+        background: url('../i/landingBg.jpg') 48.5% 0% no-repeat;
+    }
+    #headerBgShort {
+        background: url('../i/landingBg.jpg') 48.5% 27% no-repeat;
+    }
+    .language {
+        top: 1vh;
+    }
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 60px 10%;
+    }
+    figure {
+        margin: 20px 0 0 0;
+        border: 0;
+        border-collapse: collapse;
+        border-right: 1px solid #0a0a0a;
+    }
+    figure:last-of-type {
+        border: 0;
+    }
+}

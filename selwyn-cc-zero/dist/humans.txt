@@ -1,0 +1,25 @@
+/* TEAM */
+
+    Chef: Selwyn Versteeg
+    Contact: talk@selwyn.cc
+    From: The Netherlands
+
+    UI developer: Selwyn Versteeg
+    Contact: talk@selwyn.cc
+    From: The Netherlands
+
+    Illustrator: Selwyn Versteeg
+    Contact: talk@selwyn.cc
+    From: The Netherlands
+
+    Web designer: Selwyn Versteeg
+    Contact: talk@selwyn.cc
+    From: The Netherlands
+
+/* SITE */
+
+    Language: English
+    Doctype: HTML5
+    IDE: Brackets, Terminal, Inkscape
+    Packages: gulp, gitgoodies, forever
+    Host: DigitalOcean

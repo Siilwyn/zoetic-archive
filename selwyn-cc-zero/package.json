@@ -1,0 +1,25 @@
+{
+  "name": "selwyn.cc",
+  "version": "1.0.0",
+  "description": "Portfolio website.",
+  "author": "Selwyn Versteeg",
+  "license": "ISC",
+  "scripts": {
+    "preview": "http-server",
+    "prebuild": "rm -r dist/* && mkdir dist/css dist/js",
+    "build": "npm run html && npm run css -s && npm run js -s && npm run img -s",
+    "postbuild": "cp humans.txt robots.txt dist && cp -r f dist",
+    "html": "htmlprocessor *.html -o dist",
+    "css": "cat **/*.css | autoprefixer | cleancss -o dist/css/min.css",
+    "js": "uglifyjs **/*.js -o dist/js/min.js",
+    "img": "imagemin i/**/**/* dist/i"
+  },
+  "devDependencies": {
+    "autoprefixer": "^5.1.0",
+    "clean-css": "^3.1.6",
+    "htmlprocessor": "^0.1.10",
+    "http-server": "^0.9.0",
+    "imagemin": "^3.1.0",
+    "uglify-js": "^2.4.17"
+  }
+}
